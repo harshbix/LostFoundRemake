@@ -1,20 +1,67 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, SafeAreaView, Image, TouchableOpacity } from 'react-native';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <SafeAreaView style={styles.container}>
+      <Image
+        style={styles.logo}
+        source={require("./assets/lostfound.png")}
+      />
+      <Text style={styles.text}>Lost and Found</Text>
+      <Text style={styles.textMute}>
+        Discover items near you and reconnect with owners
+      </Text>
+
+      {/* Navigate to home on button press */}
+      <TouchableOpacity
+        style={styles.button}
+        onPress={() => router.push("/home")} // Navigate to home screen
+      >
+        <Text style={styles.buttonText}>Get Started</Text>
+      </TouchableOpacity>
+    </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: "white",
+    padding: 35,
+  },
+  logo: {
+    height: 150,
+    width: 150,
+  },
+  text: {
+    fontSize: 40,
+    fontWeight: "bold",
+    color: "#333",
+    paddingBottom: 10,
+    textAlign: "center",
+  },
+  textMute: {
+    fontSize: 18,
+    textAlign: "center",
+    color: "#666",
+    marginBottom: 20,
+  },
+  button: {
+    backgroundColor: "#5271ff",
+    paddingVertical: 12,
+    paddingHorizontal: 20,
+    borderRadius: 8,
+    alignItems: "center",
+    width: "90%",
+    position: "absolute",
+    bottom: 50, // Move button to the bottom
+  },
+  buttonText: {
+    color: "white",
+    fontSize: 18,
+    fontWeight: "bold",
   },
 });
