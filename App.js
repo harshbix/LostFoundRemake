@@ -30,21 +30,21 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     backgroundColor: "white",
-    padding: 35,
+    padding: 20,
   },
   logo: {
     height: 150,
     width: 150,
   },
   text: {
-    fontSize: 40,
+    fontSize: 50,
     fontWeight: "bold",
     color: "#333",
     paddingBottom: 10,
     textAlign: "center",
   },
   textMute: {
-    fontSize: 18,
+    fontSize: 22,
     textAlign: "center",
     color: "#666",
     marginBottom: 20,
@@ -61,7 +61,6 @@ const styles = StyleSheet.create({
   },
   buttonText: {
     color: "white",
-    fontSize: 18,
-    fontWeight: "bold",
+    fontSize: 22,
   },
 });
